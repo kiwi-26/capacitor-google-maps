@@ -389,6 +389,7 @@ export interface Marker {
    * @default 0
    */
   zIndex?: number;
+  content?: HTMLElement;
 }
 
 /**

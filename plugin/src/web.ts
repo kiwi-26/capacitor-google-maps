@@ -645,7 +645,9 @@ export class CapacitorGoogleMapsWeb extends WebPlugin implements CapacitorGoogle
 
     let content: HTMLElement | undefined = undefined;
 
-    if (marker.iconUrl) {
+    if (marker.content) {
+      content = marker.content;
+    } else if (marker.iconUrl) {
       const img = document.createElement('img');
       img.src = marker.iconUrl;
       if (marker.iconSize) {
